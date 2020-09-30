@@ -66,7 +66,10 @@ binary_sensor:
 
   - platform: gpio
     name: ${device_name}_status
-    pin: GPIO04
+    pin: 
+      number: GPIO04
+      mode: INPUT_PULLUP
+      inverted: True
     id: switch_1
     on_press:
       then:
